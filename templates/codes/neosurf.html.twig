@@ -1,0 +1,366 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Statut-Neosurf{% endblock %}
+
+{% block body %}
+
+<body >  
+  <!-- Masthead -->
+
+  <section>
+
+    <div id="minimal-bootstrap-carousel" data-ride="carousel" class="carousel slide carousel-fade slider-content-style slider-home-one" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active slide-1" style="background-image: url(/images/products/neosurf-carousel1.jpg);">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="box valign-middle">
+                            <div class="content text-center">
+
+
+                                <p class="text-white-75 font-weight-light mb-5" style="color:rgb(255,51,153);font-size:1.5em;font-weight:bold;">"JE VEUX PAYER EN LIGNE AUSSI FACILEMENT QUE LORSQUE JE PAYE EN ESPECES"</p>
+                                
+                                <a data-animation="animated fadeInDown" href="{{path('verification-neosurf')}}" class="thm-btn ">Obtenir le statut d'un coupon Neosurf</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item slide-2" style="background-image: url(/images/products/neosurf-carousel2.jpg);">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="box valign-middle">
+                            <div class="content text-center">
+                                <p class="text-white-75 font-weight-light mb-5" style="color:rgb(255,51,153);font-size:1.5em;font-weight:bold;">"JE VEUX PAYER EN LIGNE SANS DONNER D'INFORMATIONS PERSONNELLES"</p>    
+
+                                <a data-animation="animated fadeInDown" href="{{path('achat-recharges')}}" class="thm-btn ">Acheter une recharge Neosurf</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#minimal-bootstrap-carousel" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#minimal-bootstrap-carousel" role="button" data-slide="next">
+            <i class="fa fa-arrow-right"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+
+  </section>
+  
+  
+  
+  
+
+  <!-- About Section -->
+  <section class="page-section bg-dark" id="verification">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">Obtenir le statut de votre coupon Neosurf</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4">Entrer les informations requises <i class="fa fa-check-circle"></i></p>
+          <p class="text-white-50 mb-4">Lancer l'opération<i class="fa fa-check-circle"></i></p>
+          <p class="text-white-50 mb-4">Recevoir la réponse par e-mail en 30 secondes<i class="fa fa-check-circle"></i></p>          
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="{{path('verification-neosurf')}}">Obtenir le statut d'un coupon Neosurf</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <!--
+  <section class="page-section" id="verification">
+    
+  </section>
+  -->
+
+
+  <!-- Portfolio Section -->
+  <hr/>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white" id="achat">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">Recharger votre carte Neosurf</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4">Recharger votre carte prépayée en 30 secondes <i class="fa fa-check-circle"></i></p>
+          <p class="text-white-50 mb-4">Réception de votre code de rechargemant par e-mail <i class="fa fa-check-circle"></i></p>
+          <p class="text-white-50 mb-4">Payement sécurisé et fiable <i class="fa fa-check-circle"></i></p>          
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="{{path('achat-recharges')}}">Achetez votre recharge neosurf</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Souhaitiez-vous en savoir plus?</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5">
+
+            statut-secured est le site internet de référence pour obtenir facilement et rapidement le statut de votre recharge, carte prépayée ou carte cadeau en ligne. Rechargez votre carte prépayée en France en seulement 30 secondes. Offrez-vous également une carte bancaire prépayée, une carte prépayée de jeu ou encore une carte cadeau Musique, TV & Apps en seulement quelques clics. Le paiement est possible par carte bancaire (CB, Visa, Mastercard, Maestro). Après l'achat, votre code numérique s'affiche sur votre écran et vous recevez également votre recharge par e-mail. Quelle que soit votre envie du moment, statut-secured.com a la solution pour vous.Effectuer vos opérations d'achat et d'obtention de statut sans plus attendre sur statut-secured.com. 
+
+          </p>
+        </div>
+      </div>
+      <div class="row">
+       
+        <div class="col-md-12 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+          <!-- Make sure to change the email address in anchor text AND the link below! -->
+          <a class="d-block" href="mailto:info@statut-secured.com">info@statut-secured.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<style>
+    #minimal-bootstrap-carousel {
+    margin-top: 0px;
+    position: relative;
+}
+
+#minimal-bootstrap-carousel .carousel-caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    text-align: right;
+    text-shadow: none;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    #minimal-bootstrap-carousel .carousel-caption .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    #minimal-bootstrap-carousel .carousel-caption .container {
+        max-width: 720px;
+    }
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box {
+    display: table-cell;
+    text-align: left;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box.valign-top {
+    vertical-align: top;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box.valign-bottom {
+    vertical-align: bottom;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box.valign-middle {
+    vertical-align: middle;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box .content {
+    display: block;
+}
+
+#minimal-bootstrap-carousel [class*=carousel-control] {
+    background: none;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    background-color: transparent;
+    visibility: visible !important;
+    opacity: 1;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+@media (max-width: 667px) {
+    #minimal-bootstrap-carousel [class*=carousel-control] {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #minimal-bootstrap-carousel [class*=carousel-control] {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        background: rgba(255, 255, 255, 0.4);
+        color: #000;
+    }
+}
+
+#minimal-bootstrap-carousel .carousel-control-prev {
+    left: 1%;
+}
+
+#minimal-bootstrap-carousel .carousel-control-next {
+    right: 1%;
+}
+
+#minimal-bootstrap-carousel [class*=carousel-control]:hover {
+    opacity: 1;
+    background: rgb(255,51,153);
+    border-color: rgb(255,51,153);
+}
+
+/* fixing slider height */
+#minimal-bootstrap-carousel.slider-home-one .carousel-inner .carousel-item {
+    min-height: 500px;
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-color: #222;
+}
+
+
+.slider-content-style .content {
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.slider-content-style .content h3,
+.slider-content-style .content h2,
+.slider-content-style .content p {
+    margin: 0;
+}
+
+.slider-content-style .content h3 {
+    color: #fff;
+    font-size: 100px;
+    line-height: 1em;
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.slider-content-style .content p {
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: .150em;
+    margin-top: 20px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.slider-content-style .content a.thm-btn {
+    background: rgb(255,51,153);;
+    display: inline-block;
+    vertical-align: middle;
+    color: rgb(255,255,255);
+    font-size: 18px;
+    letter-spacing: .1em;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    padding: 10px 17px;
+    margin-top: 27px;
+    transition: all .4s ease;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    text-decoration:none;
+}
+
+.slider-content-style .content a.thm-btn:hover {
+    background: #fff;
+    color:rgb(255,51,153);;
+}
+</style>
+
+<script>
+
+    "use strict"; // Start of use strict
+(function($) {
+
+
+    function bootstrapAnimatedLayer() {
+
+        function doAnimations(elems) {
+            //Cache the animationend event in a variable
+            var animEndEv = "webkitAnimationEnd animationend";
+
+            elems.each(function() {
+                var $this = $(this),
+                    $animationType = $this.data("animation");
+                $this.addClass($animationType).one(animEndEv, function() {
+                    $this.removeClass($animationType);
+                });
+            });
+        }
+
+        //Variables on page load
+        var $myCarousel = $("#minimal-bootstrap-carousel"),
+            $firstAnimatingElems = $myCarousel
+            .find(".carousel-item:first")
+            .find("[data-animation ^= 'animated']");
+
+        //Initialize carousel
+        $myCarousel.carousel();
+
+        //Animate captions in first slide on page load
+        doAnimations($firstAnimatingElems);
+
+        //Other slides to be animated on carousel slide event
+        $myCarousel.on("slide.bs.carousel", function(e) {
+            var $animatingElems = $(e.relatedTarget).find(
+                "[data-animation ^= 'animated']"
+            );
+            doAnimations($animatingElems);
+        });
+    }
+
+    bootstrapAnimatedLayer();
+
+
+
+})(jQuery);
+
+</script>  
+
+{% endblock %}

@@ -1,0 +1,3 @@
+#!/bin/sh
+ rsync -av ./ oo4ir_monsupersite@codes-verification.com:~/codes-verification --include=vendor --include=public/build --include=.env --include=public/.htaccess
+ 

